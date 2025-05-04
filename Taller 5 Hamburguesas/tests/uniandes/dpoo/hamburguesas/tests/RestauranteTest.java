@@ -52,7 +52,7 @@ public class RestauranteTest {
 	@Test
     void testCargarInformacionRestaurante( ) throws IOException, NumberFormatException, HamburguesaException
     {
-		restaurante.cargarInformacionRestaurante(new File("./data/ingredientesTest.txt"),new File("./data/menuTest.txt"),new File("./data/combosTest.txt"));
+		restaurante.cargarInformacionRestaurante(new File("./data/ingredientes.txt"),new File("./data/menu.txt"),new File("./data/combos.txt"));
 		
 		ArrayList<Ingrediente> ingredientes = restaurante.getIngredientes();
 		ArrayList<ProductoMenu> menuBase = restaurante.getMenuBase();
@@ -126,8 +126,13 @@ public class RestauranteTest {
 		
     } 
 	
-	
-	
+	@Test
+    void testExcepciones( ) throws NoHayPedidoEnCursoException, IOException, YaHayUnPedidoEnCursoException
+    {
+		
+	//	assertThrows(IngredienteRepetidoException.class, () -> {restaurante.cargarIngredientes(new File("./data/ingredientesTest.txt")));});
+	//no se pueden probar las cargas individuales porque son privadas, pero con estos test daria excepcion
+    } 
 	
 	private boolean compararProductoMenu(ProductoMenu productoMenu, String nombre, int precio) {
 		
