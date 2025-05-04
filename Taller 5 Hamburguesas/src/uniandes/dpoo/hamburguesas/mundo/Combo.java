@@ -17,7 +17,11 @@ public class Combo implements Producto
      */
     private double descuento;
 
-    /**
+    public double getDescuento() {
+		return descuento;
+	}
+
+	/**
      * El nombre del combo
      */
     private String nombreCombo;
@@ -35,7 +39,11 @@ public class Combo implements Producto
         this.descuento = descuento;
     }
 
-    @Override
+    public ArrayList<ProductoMenu> getItemsCombo() {
+		return itemsCombo;
+	}
+
+	@Override
     public String getNombre( )
     {
         return nombreCombo;

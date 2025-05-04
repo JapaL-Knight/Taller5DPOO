@@ -262,7 +262,7 @@ public class Restaurante
 
                     for( Combo c : this.menuCombos )
                     {
-                        if( c.getNombre( ).equals( nombreCombo ) )
+                        if( c.getNombre( ).equals( nombreCombo ) ) 
                         {
                             throw new ProductoRepetidoException( nombreCombo );
                         }
